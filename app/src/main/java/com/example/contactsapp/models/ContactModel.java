@@ -1,5 +1,6 @@
 package com.example.contactsapp.models;
 
+import androidx.annotation.NonNull;
 import androidx.databinding.BaseObservable;
 
 public class ContactModel extends BaseObservable {
@@ -52,5 +53,9 @@ public class ContactModel extends BaseObservable {
         this.userId = userId;
     }
 
-
+    @NonNull
+    @Override
+    public String toString() {
+        return contactId;
+    }
 }

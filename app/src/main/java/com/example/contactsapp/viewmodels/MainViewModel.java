@@ -2,6 +2,8 @@ package com.example.contactsapp.viewmodels;
 
 import android.app.Application;
 
+import androidx.databinding.ObservableArrayList;
+import androidx.databinding.ObservableInt;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
@@ -15,14 +17,15 @@ public class MainViewModel extends AndroidViewModel {
     private MainRepository notesRepository;
 
     public LiveData<List<ContactModel>> getContacts() {
-        return contactsData;
+        return notesRepository.getContacts();
     }
 
-    private LiveData<List<ContactModel>> contactsData;
+    public ObservableArrayList<ContactModel> contactModels = new ObservableArrayList<>();
+    public ObservableInt contactModelPosition = new ObservableInt(0);
+
     public MainViewModel(Application application) {
         super(application);
         notesRepository = new MainRepository(application);
-        contactsData = notesRepository.getContacts();
     }
 
 }
