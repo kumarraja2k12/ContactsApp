@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="contact" type="com.example.contactsapp.models.ContactModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -46,7 +50,8 @@
         app:layout_constraintLeft_toRightOf="@+id/label_staging_id"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_contacts"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:text="@{contact.stagingId}"/>
 
 
     <TextView
@@ -70,7 +75,8 @@
         app:layout_constraintLeft_toRightOf="@+id/label_context"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tetview_staging_id"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:text="@{contact.context}"/>
 
     <TextView
         android:id="@+id/label_status"
@@ -93,7 +99,8 @@
         app:layout_constraintLeft_toRightOf="@+id/label_status"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tetview_context"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:text="@{Integer.toString(contact.status)}"/>
 
 
     <TextView
@@ -117,6 +124,8 @@
         app:layout_constraintLeft_toRightOf="@+id/label_user_id"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tetview_status"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:text="@{contact.userId}"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
