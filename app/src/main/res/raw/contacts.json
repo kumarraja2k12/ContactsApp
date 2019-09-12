@@ -1,0 +1,43 @@
+{
+  "contacts":[
+    {
+      "id": 2,
+      "contactId":"48f3",
+      "stagingId":"1196"
+    },
+    {"id": 3,
+    "contactId":"3e47",
+      "stagingId":"f1fe"
+    },
+    {"id": 4,
+    "contactId":"2cac",
+      "stagingId":"036e"
+    }
+    ],
+    "extensions":[
+      {
+        "context": "Gmail",
+        "phoneContactId":2
+      },
+      {
+        "context": "Gmail",
+        "phoneContactId": 3 
+      },
+      {
+        "context": "Gmail1",
+        "phoneContactId": 4 
+      }
+      ],
+      "accounts":[
+        {
+          "status": 1,
+          "userId":"test_one@gmail.com",
+          "context":"Gmail"
+        },
+        {
+          "status": 0,
+          "userId":"test_two@gmail.com",
+          "context":"Gmail1"
+        }
+      ]
+}
